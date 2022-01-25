@@ -1,4 +1,4 @@
-name: JAVA-Maven CI
+name: Maven_snyk
 
 on:
  push:
