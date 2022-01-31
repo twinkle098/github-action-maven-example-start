@@ -36,8 +36,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1.2.0
     - name: build
-      run: ./buildmyartifact.sh
-    - name: publish to artifactory
-      uses: advancedcsg-open/action-jfrog-cli@master        
+      Path:        
       env:
         ARTIFACT_TOKEN: ${{ secrets.ARTIFACT_TOKEN }}
