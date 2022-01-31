@@ -31,11 +31,11 @@ jobs:
         #  SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}  
           
   artifactoryUpload:
-    name: Upload Trigger
+    name: Upload Artifact
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1.2.0
     - name: build
-      Path: https://githubaction.jfrog.io/artifactory/action-libs-release/    
+      run: mvn -s setting.xml deploy    
       env:
         ARTIFACT_TOKEN: ${{ secrets.ARTIFACT_TOKEN }}
