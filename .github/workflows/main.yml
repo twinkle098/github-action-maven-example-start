@@ -37,12 +37,14 @@ jobs:
       uses: actions/setup-java@v2
       with: 
         #running setup-java against overwrits the settings.xml
-      distribution: 'adopt'
-      java-version: '14'
-      settings-path: ${{ github.workspace }}
-      overwrite-settings: false
-      
+        distribution: 'adopt'
+        java-version: '14'
+        
     - name: build
       run: mvn -s setting.xml deploy    
       env:
         ARTIFACT_TOKEN: ${{ secrets.ARTIFACT_TOKEN }}
+    - name: cmds  
+      run: |
+        pwd
+        echo " build is working "
