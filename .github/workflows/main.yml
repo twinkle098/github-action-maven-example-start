@@ -36,6 +36,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1.2.0
     - name: build
-      Path:        
+      Path: https://githubaction.jfrog.io/artifactory/action-libs-release/    
       env:
         ARTIFACT_TOKEN: ${{ secrets.ARTIFACT_TOKEN }}
