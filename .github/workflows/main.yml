@@ -39,3 +39,5 @@ jobs:
       run: ./buildmyartifact.sh
     - name: publish to artifactory
       uses: advancedcsg-open/action-jfrog-cli@master        
+      env:
+        ARTIFACT_TOKEN: ${{ secrets.ARTIFACT_TOKEN }}
