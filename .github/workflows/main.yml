@@ -35,6 +35,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1.2.0
+    - name: Set up our custom Artifactory instance
+      uses: actions/setup-java@v2
+      with: 
+        #running setup-java against overwrits the settings.xml
+      distribution: 'adopt'
+      java-version: '14'
+      settings-path: ${{ github.workspace }}
+      overwrite-settings: false
+      
     - name: build
       run: mvn -s setting.xml deploy    
       env:
