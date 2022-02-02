@@ -38,6 +38,7 @@ jobs:
       with: 
         #running setup-java against overwrits the settings.xml
         java-version: '14'
+        distribution: 'adopt'
         
     - name: build
       run: mvn -s setting.xml deploy    
