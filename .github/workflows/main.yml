@@ -37,7 +37,6 @@ jobs:
       uses: actions/setup-java@v2
       with: 
         #running setup-java against overwrits the settings.xml
-        distribution: 'adopt'
         java-version: '14'
         
     - name: build
