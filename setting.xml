@@ -4,12 +4,12 @@
   <servers>
     <server>
       <username>twinkle25</username>
-      <password>dbee2033-1637-4ce3-99bd-fac8a0251edf</password>
+      <password>Action@1234</password>
       <id>central</id>
     </server>
     <server>
       <username>twinkle25</username>
-      <password>dbee2033-1637-4ce3-99bd-fac8a0251edf</password>
+      <password>Action@1234</password>
       <id>snapshots</id>
     </server>
   </servers>
