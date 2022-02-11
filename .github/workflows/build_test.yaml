@@ -49,7 +49,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: SonarQube Scan
-      uses: sonarqube-action@v1
+      uses: sonarsource/sonarcloud-github-action@master
       with:
         login: ${{ secrets.SONAR_TOKEN }}
 
