@@ -42,6 +42,17 @@ jobs:
             name: Package
             path: staging
 
+  
+  sonarQubeTrigger:
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: SonarQube Scan
+      uses: sonarqube-action@v1
+      with:
+        login: ${{ secrets.SONAR_TOKEN }}
+
   build-docker-image:
     name: Publish to Docker Hub
     runs-on: ubuntu-latest
